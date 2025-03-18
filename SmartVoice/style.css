@@ -1,0 +1,86 @@
+@import url('https://fonts.cdnfonts.com/css/telegraf');
+
+body {
+  font-family: 'Telegraf', sans-serif;
+  color: white;
+  background-color: black;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.strana {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.nadpis_vlavo {
+  font-size: clamp(24px, 4vw, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.text_vpravo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  width: 50vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, #165d79,  #a8e930);
+}
+
+.text_vpravo h2 {
+  font-size: clamp(24px, 3vw, 40px);
+}
+
+.text_vpravo h3 {
+  font-size: clamp(18px, 2.5vw, 30px);
+}
+
+.text_vpravo button {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: 3px white;
+  background-color: white;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'telegraf0, sans-serif';
+  border-radius: 8px;
+  background-color: hsl(199, 76%, 33%);
+  
+}
+
+.text_vpravo button:hover {
+  background-color: lightgray;
+}
+
+@media (max-width: 800px) {
+  .strana {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nadpis_vlavo {
+    width: 100vw;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .text_vpravo {
+    width: 100vw;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+}
