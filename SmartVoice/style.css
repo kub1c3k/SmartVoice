@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/telegraf');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   font-family: 'Telegraf', sans-serif;
   color: white;
@@ -36,7 +36,7 @@ body {
   text-align: center;
   width: 50vw;
   height: 100vh;
-  background-image: url(/SmartVoice/images/backgrd.jpg);
+  background-image: url(/SmartVoice/images/final.jpg);
   
 }
 
@@ -111,4 +111,37 @@ body {
 .button:hover .hover-text {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.tittle_r{
+text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  transition: all 0.5s;
+  -webkit-text-stroke: 4px #d6f4f4;
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 15rem;
+  text-align: center;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 10px 10px 0px #07bccc,
+    15px 15px 0px #e601c0,
+    20px 20px 0px #e9019a,
+    25px 25px 0px #f40468,
+    45px 45px 10px #482896;
+  cursor: pointer;
+}
+
+main:hover {
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-shadow: none;
+}
+
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
 }
