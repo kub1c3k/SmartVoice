@@ -11,13 +11,13 @@ body {
   align-items: center;
 }
 
-.strana {
+.box {
   display: flex;
   width: 100vw;
   height: 100vh;
 }
 
-.nadpis_vlavo {
+.tittle_left {
   font-size: clamp(24px, 4vw, 60px);
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@ body {
   text-align: center;
 }
 
-.text_vpravo {
+.box_right {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,51 +36,79 @@ body {
   text-align: center;
   width: 50vw;
   height: 100vh;
-  background-image: linear-gradient(to right, #165d79,  #a8e930);
-}
-
-.text_vpravo h2 {
-  font-size: clamp(24px, 3vw, 40px);
-}
-
-.text_vpravo h3 {
-  font-size: clamp(18px, 2.5vw, 30px);
-}
-
-.text_vpravo button {
-  font-size: 1rem;
-  padding: 0.8rem 1.5rem;
-  border: 3px white;
-  background-color: white;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-  font-family: 'telegraf0, sans-serif';
-  border-radius: 8px;
-  background-color: hsl(199, 76%, 33%);
+  background-image: url(/SmartVoice/images/backgrd.jpg);
   
 }
 
-.text_vpravo button:hover {
-  background-color: lightgray;
+.box_right h2 {
+  font-size: clamp(24px, 3vw, 40px);
+}
+
+.box_right h3 {
+  font-size: clamp(18px, 2.5vw, 30px);
 }
 
 @media (max-width: 800px) {
-  .strana {
+  .box {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .nadpis_vlavo {
+  .tittle_left {
     width: 100vw;
     height: auto;
     padding: 2rem 0;
   }
 
-  .text_vpravo {
+  .box_right {
     width: 100vw;
     height: auto;
     padding: 2rem 1rem;
   }
+}
+
+
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
 }
