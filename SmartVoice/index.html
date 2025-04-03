@@ -8,34 +8,41 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
   <div class="box">
-    <h1 class="tittle_left">SmartVoice</h1>
-    <div class="box_right">
+    <div class="tittle_left">
+      <img src="logo.png" alt="logo" class="glitch">
+    </div>
+  
+    <section>
+      <div class="box_right">
         <div class="wave">
-          <h2 class="tittle_r">Ovládaj svoje zariadenia hlasom</h2>
-          <h3 class="tittle_r">Získaj počasie, správy a odpovede okamžite</h3>
+          <h2 class="cursor typewriter-animation">Ovládaj svoje zariadenia hlasom</h2>
+          <h3 class="cursor typewriter-animation">Získaj počasie, správy a odpovede okamžite</h3>
           <button class="button mt-5" data-text="Awesome">
-            <span class="actual-text">&nbsp;Objaviť&nbsp;</span>
+            <span class="actual-text-animation cursor">&nbsp;Objaviť&nbsp;</span>
             <span aria-hidden="true" class="hover-text">&nbsp;Objaviť&nbsp;</span>
           </button>
         </div>
-     </div>
-      
-    </div>
+      </div>
+    </section>
   </div>
 
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+  const typewriterElements = document.querySelectorAll('.typewriter-animation, .actual-text-animation');
+  
+  typewriterElements.forEach(element => {
+    element.addEventListener('animationend', (event) => {
+      // Check if the finished animation is the typewriter one
+      if (event.animationName === 'typewriter' || event.animationName === 'actual-text') {
+        element.classList.add('cursor-hidden'); // Add class to hide the cursor
+      }
+    });
+  });
+});
 
-
-
-
-
-
-
-
-
-
-
-
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
 </body>
